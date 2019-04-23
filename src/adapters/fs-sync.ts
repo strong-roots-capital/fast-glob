@@ -1,6 +1,6 @@
 import * as fs from 'fs';
 
-import * as fsStat from '@nodelib/fs.stat';
+import * as fsStat from '../../../nodelib/packages/fs/fs.stat';
 
 import FileSystem from './fs';
 
@@ -46,6 +46,6 @@ export default class FileSystemSync extends FileSystem<Entry[]> {
 	 * Return fs.Stats for the provided path.
 	 */
 	public getStat(filepath: string): fs.Stats {
-		return fsStat.statSync(filepath, { throwErrorOnBrokenSymlinks: false });
+		return fsStat.statSync(filepath, { throwErrorOnBrokenSymbolicLink: false });
 	}
 }
