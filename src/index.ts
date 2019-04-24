@@ -1,6 +1,6 @@
 import * as taskManager from './managers/tasks';
-import Provider from './providers/provider';
 import ProviderAsync from './providers/async';
+import Provider from './providers/provider';
 import ProviderStream from './providers/stream';
 import ProviderSync from './providers/sync';
 import Settings, { Options, TransformFunction } from './settings';
